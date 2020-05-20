@@ -1,0 +1,24 @@
+﻿<Window x:Class="moicursach.addPrice"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:moicursach"
+        mc:Ignorable="d"
+        Title="addPrice" Height="400" Width="400">
+    <Grid>
+        <Label FontSize="15" FontWeight="Bold" Content="Добавление цены для продукта" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+        <Label FontSize="15" Content="Продукт" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70,0,0,200"/>
+        <ComboBox x:Name="Products" Width="auto" Height="30" 
+                  HorizontalAlignment="Left" VerticalAlignment="Center" 
+                  Margin="150,0,0,200" SelectionChanged="Products_SelectionChanged"
+        />
+        <Label FontSize="15" Content="Дата входа" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70,0,0,100"/>
+        <Label FontSize="15" Content="Дата выхода" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70,0,0,0"/>
+        <DatePicker x:Name="DateIn" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="180,0,0,100"></DatePicker>
+        <DatePicker x:Name="DateOut" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="180,0,0,0"></DatePicker>
+        <Label FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70,100,0,0" Content="Стоимость"/>
+        <TextBox x:Name="Value" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="180,100,0,0" Width="100" Height="20"/>
+        <Button x:Name="Confirm" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="130,200,0,0" Width="100" Height="20" Click="Confirm_Click">Добавить</Button>
+    </Grid>
+</Window>
