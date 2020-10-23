@@ -63,7 +63,7 @@ namespace moicursach
                 reader.Close();
                 SqlCommand command = connection.CreateCommand();
 
-                command.CommandText = $"insert into Cart values({Id}, {productId}, null, null)";
+                command.CommandText = $"insert into Cart values({Id}, {productId})";
                 MessageBox.Show(command.ExecuteNonQuery().ToString());
             }
         }

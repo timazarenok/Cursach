@@ -31,7 +31,7 @@ namespace moicursach
 
         private void InputListBox()
         {
-            DataTable products = mainWindow.Select("select Products.[name], Categories.[name] as category, [description], Prices.[value] as price from Products join Categories on Categories.id=categoryId join Prices on Prices.productId = Products.id");
+            DataTable products = mainWindow.Select("select Products.[name], Categories.[name] as category, [description], Prices.[value] as price from Products join Categories on Categories.id=category_id join Prices on Prices.product_id = Products.id");
             List<Product> items = new List<Product>();
             foreach(DataRow dr in products.Rows)
             {
